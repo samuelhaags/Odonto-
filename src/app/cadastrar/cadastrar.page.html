@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title><ion-icon name="person-add-outline"></ion-icon> Cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-list>
+
+        <ion-item>
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label expand="block" position="floating">Nome</ion-label>
+          <ion-input placeholder="Nome Sobrenome" type="text" [(ngModel)]="_nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="call" slot="start"></ion-icon>
+          <ion-label position="floating">Telefone</ion-label>
+          <ion-input type="number" [(ngModel)]="_telefone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-label position="left">Data de Nascimento</ion-label>
+          <ion-input type="date"[(ngModel)]="_dataNascimento"></ion-input>
+        </ion-item>
+
+        <ion-list>
+          <ion-radio-group value="sexo">
+            <ion-list-header>
+              <ion-label>Sexo</ion-label>
+            </ion-list-header>
+
+            <ion-item>
+              <ion-label>Feminino</ion-label>
+              <ion-radio slot="end" value="female"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Masculino</ion-label>
+              <ion-radio slot="end" value="male"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Prefiro não informar</ion-label>
+              <ion-radio slot="end" value="NDF"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+      </ion-list>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-content>
+  <ion-item>
+    <ion-col size="9">
+      <ion-row>
+        <ion-button expand="block" color="danger">Cancelar</ion-button>
+        <ion-button expand="block" color="success" (click)="cadastrar()">Salvar</ion-button>
+      </ion-row>
+    </ion-col>
+  </ion-item>
+  </ion-content>
+</ion-content>

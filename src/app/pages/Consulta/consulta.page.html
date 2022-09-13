@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      <ion-icon name="person-circle-outline"></ion-icon> Agendamento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-list>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>
+              <ion-icon name="reader-outline"></ion-icon> Consulta
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <br>
+        <ion-item>
+          <ion-icon name="medkit" slot="start"></ion-icon>
+          <ion-label position="left">Sintomas</ion-label>
+          <ion-input placeholder="Descreva seus sintomas" type="text" [(ngModel)]="_sintomas"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-label position="left">Data</ion-label>
+          <ion-input type="date" [(ngModel)]="_data"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="time" slot="start"></ion-icon>
+          <ion-label position="left">Horário</ion-label>
+          <ion-input type="time" [(ngModel)]="_horario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-col size="9">
+            <ion-row>
+              <ion-button expand="block" color="danger">Cancelar</ion-button>
+              <ion-button expand="block" color="success" (click)="cadastrar()">Salvar</ion-button>
+            </ion-row>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+>
