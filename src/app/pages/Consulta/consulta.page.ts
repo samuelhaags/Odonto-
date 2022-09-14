@@ -59,4 +59,8 @@ export class consultaPage implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  cancelar(): void{
+    this.router.navigate(['/home']);
+  }
+
 }

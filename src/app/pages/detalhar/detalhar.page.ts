@@ -76,6 +76,7 @@ export class DetalharPage implements OnInit {
     }
   }
 
+
   async presentConfirmAlert(titulo: string, subtitulo: string, msg: string) {
     const alert = await this.alertController.create({
       header: titulo,
@@ -117,6 +118,9 @@ export class DetalharPage implements OnInit {
     } else {
       return true;
     }
+  }
+  voltar(): void{
+    this.router.navigate(['/home']);
   }
 
 }

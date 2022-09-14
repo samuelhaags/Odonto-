@@ -60,4 +60,9 @@ cadastrar(): void{
     this.router.navigate(['/home']);
 }
 
+cancelar(): void{
+  this.router.navigate(['/home']);
+}
+
+
 }
